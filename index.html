@@ -19,7 +19,7 @@
   <body>
     <div class="header-head">
       <span class="main-logo"><h1>Web Topics</h1></span>
-      <button class="dark-mode-button">
+      <button class="dark-mode-button" onclick="document.body.classList.toggle('darkmode')">
         <span class="moon-icon">🌙</span>
         Dark Mode
       </button>
@@ -36,14 +36,14 @@
     </section>
 
     <div class="container">
-      <h3 style="color: #03c180">Welcom to our website!</h3>
-      <h4>We have a new design that's fresh ,modern, and easy to use.</h4>
+      <h3 style="color: var(--brand-secondary)">Welcom to our website!</h3>
+      <h4 style="color: var(--body-text);">We have a new design that's fresh ,modern, and easy to use.</h4>
     </div>
 
     <section class="full-black-section">
       <section class="main-content">
         <div>
-          <h2 style="color: var(--brand-secondary-l)">
+          <h2 style="color: var(--brand-secondary)">
             Web Development Languages
           </h2>
         </div>

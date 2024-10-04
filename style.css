@@ -1,21 +1,22 @@
 :root {
   /**Light Mode**/
-  --brand-primary-l: #0768ac;
-  --brand-secondary-l: #03c180;
-  --bg_default-l: #ffffff;
-  --bg_body-l: #f0f9ff;
-  --lines-color-l: #dddddd;
-  --body-text-l: #333333;
-  --heart-color-l: #dc143c;
-
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #ffffff;
+  --bg_body: #f0f9ff;
+  --lines-color: #dddddd;
+  --body-text: #333333;
+  --heart-color: #dc143c;
+}
+.darkmode {
   /**Dark Mode**/
-  --brand-primary-d: #0768ac;
-  --brand-secondary-d: #03c180;
-  --bg_default-d: #1a1a1a;
-  --bg_body-d: #282828;
-  --lines-color-d: #000000;
-  --body-text-d: #ededed;
-  --heart-color-d: #dc143c;
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #1a1a1a;
+  --bg_body: #282828;
+  --lines-color: #000000;
+  --body-text: #ededed;
+  --heart-color: #dc143c;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg_default);
 }
 
 h3,
@@ -59,7 +61,7 @@ button:active {
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
-  color: var(--brand-primary-l);
+  color: var(--brand-primary);
 }
 
 .main-logo {
@@ -69,27 +71,29 @@ button:active {
 .favourites-button,
 .dark-mode-button {
   margin-left: 10px;
+  background-color: var(--bg_default);
+  color: var(--body-text);
+  border: 2px solid var(--lines-color);
 }
 
 /* General button styles */
 .dark-mode-button {
-  background-color: #f0f0f0;
   border: none;
-  color: #333;
   cursor: pointer;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 5px;
+  border: 2px solid var(--lines-color);
 }
 
 .favourites-button {
-  background-color: #f0f0f0;
   border: none;
-  color: #333;
+
   cursor: pointer;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 5px;
+  border: 2px solid var(--lines-color);
 }
 
 .triangle-container {
@@ -173,7 +177,7 @@ button:active {
 .add-to-favourites {
   height: 40px;
   width: 250px;
-  background-color: var(--brand-secondary-l);
+  background-color: var(--brand-secondary);
   border: none;
   color: #ffffff;
   font-size: 20px;
@@ -185,7 +189,7 @@ button:active {
 
   height: 600px;
   width: 100%;
-  background-color: #dbebf8;
+  background-color: var(--bg_body);
 }
 
 .main-list {
@@ -193,18 +197,21 @@ button:active {
   flex-direction: column;
   margin-left: 300px;
   margin-right: 650px;
-  background-color: white;
+  background-color: var(--bg_default);
   border: 3px solid rgb(233, 229, 229);
   gap: 5px;
+  color: var(--body-text);
 }
 .sub-main-list {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin: 15px;
+  background-color: var(--bg_default);
 }
 
 footer {
   text-align: center;
-  background-color: #dbebf8;
+  background-color: var(--bg_body);
+  color: var(--body-text);
 }
