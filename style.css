@@ -31,6 +31,10 @@ h4 {
   margin: 0; /* Remove margin from headings */
   padding: 0; /* Remove padding from headings */
 }
+img {
+  max-width: 100%; /* The image will not exceed the container's width */
+  height: 100%; /* The height will adjust automatically to maintain the aspect ratio */
+}
 
 ul {
   list-style-type: none;
@@ -38,9 +42,16 @@ ul {
 }
 
 li {
-  margin: 10px 0;
+  margin: 0px 0;
   font-size: 18px;
 }
+
+button:active {
+  transform: scale(0.99); /* Shrinks the button when pressed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/*****************/
 
 .header-head {
   display: flex;
@@ -108,7 +119,7 @@ li {
 
 .full-black-section {
   margin: 0;
-  background-color: black;
+  background-color: rgb(46, 43, 43);
   height: 350px;
   width: 100%;
   display: flex;
@@ -117,8 +128,8 @@ li {
 }
 
 .main-content {
-  background-color: black;
-  height: 250px;
+  background-color: rgb(46, 43, 43);
+  height: 350px;
   width: 40%;
 
   display: flex;
@@ -129,22 +140,43 @@ li {
 .side-box {
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 420px;
   width: 300px;
   position: relative;
 
   align-items: right;
-  background-color: yellow;
+  background-color: white;
   border: 5px solid white;
+  margin-top: 40px;
 }
 
 .sub-side-box {
+  display: flex;
+  flex-direction: column;
+
   background-color: white;
   position: absolute;
   left: 0;
   bottom: 0;
+  right: 0;
   width: 100%;
   height: 50%;
+}
+
+.sub-sub-side-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid rgb(233, 229, 229);
+}
+
+.add-to-favourites {
+  height: 40px;
+  width: 250px;
+  background-color: var(--brand-secondary-l);
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .end-side {
@@ -163,6 +195,7 @@ li {
   margin-right: 650px;
   background-color: white;
   border: 3px solid rgb(233, 229, 229);
+  gap: 5px;
 }
 .sub-main-list {
   display: flex;
