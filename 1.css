@@ -1,0 +1,196 @@
+:root {
+  /**Light Mode**/
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #ffffff;
+  --bg_body: #f0f9ff;
+  --lines-color: #dddddd;
+  --body-text: #333333;
+  --heart-color: #dc143c;
+}
+.darkmode {
+  /**Dark Mode**/
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #1a1a1a;
+  --bg_body: #282828;
+  --lines-color: #000000;
+  --body-text: #ededed;
+  --heart-color: #dc143c;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg_default);
+}
+
+button:active {
+  transform: scale(0.99);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+select {
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--bg_default);
+  color: var(--body-text);
+}
+
+/*****************/
+
+.header-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: var(--brand-primary);
+}
+
+.main-logo {
+  margin-right: auto;
+}
+
+.favourites-button,
+.dark-mode-button {
+  margin-left: 10px;
+  background-color: var(--bg_default);
+  color: var(--body-text);
+  border: 2px solid var(--lines-color);
+}
+
+/* General button styles */
+.dark-mode-button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid var(--lines-color);
+}
+
+.favourites-button {
+  border: none;
+
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid var(--lines-color);
+}
+
+.triangle-container {
+  position: relative;
+}
+
+.triangle-a {
+  width: 100%;
+  height: 80px;
+  clip-path: polygon(100% 0, 100% 100%, 0 0%);
+  background-color: #03c180;
+  position: absolute;
+}
+.triangle-b {
+  width: 100%;
+  height: 80px;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  background: linear-gradient(to right, #066caa 0%, #04849d, #03a08d 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-left: 600px;
+}
+
+.container-of-all {
+  background-color: var(--bg_body);
+}
+
+.search-bar {
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  background-color: var(--bg_default);
+  border: 2px solid var(--lines-color);
+  border-radius: 4px;
+  width: auto;
+  height: 40px;
+}
+
+.search-input {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--bg_default);
+  color: var(--body-text);
+}
+
+.container-of-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+
+  max-width: 2000px;
+}
+
+.card {
+  background-color: var(--bg_default);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: var(--body-text);
+  text-align: left;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #666;
+  text-align: left;
+}
+
+.card .rating {
+  font-size: 18px;
+  text-align: left;
+}
+
+.card .author {
+  font-size: 12px;
+  color: var(--body-text);
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--bg_body);
+  color: var(--body-text);
+}
