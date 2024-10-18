@@ -3,28 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Google Font: Nunito Sans -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="style.css" />
-
+    <link rel="stylesheet" href="index.css" />
     <title>TAP</title>
   </head>
   <body>
     <div class="header-head">
-      <span class="main-logo"><h1>Web Topics</h1></span>
-      <button class="dark-mode-button" onclick="document.body.classList.toggle('darkmode')">
+      <a class="main-logo" href="index.html"><h1>Web Topics</h1></a>
+      <button
+        class="dark-mode-button"
+        onclick="document.body.classList.toggle('darkmode')"
+      >
         <span class="moon-icon">🌙</span>
         Dark Mode
       </button>
 
-      <button class="favourites-button">
+      <button class="favourites-button" id="favorite-btn">
         <span class="favourites-icon">🤍</span>
         Favourites
       </button>
@@ -36,76 +35,71 @@
     </section>
 
     <div class="container">
-      <h3 style="color: var(--brand-secondary)">Welcom to our website!</h3>
-      <h4 style="color: var(--body-text);">We have a new design that's fresh ,modern, and easy to use.</h4>
+      <h3
+        style="
+          color: var(--brand-secondary);
+          padding: 0;
+          margin: 0;
+          font-size: 30px;
+        "
+      >
+        Welcome to our website!
+      </h3>
+      <h4
+        style="
+          color: var(--body-text);
+          padding: 0;
+          margin: 0;
+          padding-bottom: 10px;
+          font-size: 20px;
+        "
+      >
+        We have a new design that's fresh, modern, and easy to use.
+      </h4>
     </div>
 
-    <section class="full-black-section">
-      <section class="main-content">
-        <div>
-          <h2 style="color: var(--brand-secondary)">
-            Web Development Languages
-          </h2>
-        </div>
-
-        
-        <div><h2 style="color: white">HTML</h2></div>
-        <div class="star-rating">⭐⭐⭐⭐⭐</div>
-        
-          <p style="color: white">
-            HTML (Hypertext Markup Language) is the standard markup language for
-            creating web pages and other information that can be displayed in a
-            web browser. It provides a structure for content and defines how it
-            should be displayed on a web page, including text, images, and
-            multimedia. HTML is essential for creating static web pages and is a
-            foundational technology for the World Wide Web.
-          </p>
-        </div>
-       
-      </section>
-
-      <div class="side-box">
-        <div><img src="\TAP_Project\Logos\javascript.jpg" , alt="JavaScript"></div>
-        <div class="sub-side-box">
-        <p style="font-weight: bold;">HTML by<a href="https://www.linkedin.com/in/khalid-hani-abushahla/">Sarah Smith</a></p>
-       
-        <div class="sub-sub-side-box">
-          <p style="pos">Interested in this topic?</p>
-          <button class="add-to-favourites"> Add to Favourites 🤍 </button>
-          <p style="text-align: center ; color: rgb(233, 229, 229);">Unlimited credits</p>
-        </div>
+    <div class="container-of-all">
+      <div class="search-bar">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search the website..."
+        />
+        <select>
+          <option value="default">Default</option>
+        </select>
+        <select>
+          <option value="default">Default</option>
+        </select>
       </div>
-    </section>
-    </div>
 
+      <div class="container-of-cards" id="card"></div>
 
-    <div class="end-side">
-
-      <section class="main-list">
-        <h2 style="font-weight: bold; margin-left: 15px;margin-bottom: 0;">HTML Sub Topics</h2>
-        <ul class="sub-main-list">
-          <hr style="border: none; border-top: 3px solid rgb(233, 229, 229); width: 100%;">
-          <li >✅ HTML syntax and structure</li>
-          <hr style="border: none; border-top: 3px solid rgb(233, 229, 229); width: 100%;">
-          <li >✅ HTML elements and attributes</li>
-          <hr style="border: none; border-top: 3px solid rgb(233, 229, 229); width: 100%;">
-          <li>✅ HTML forms and input elements</li>
-          <hr style="border: none; border-top: 3px solid rgb(233, 229, 229); width: 100%;">
-          <li>✅ HTML tables and lists</li>
-          <hr style="border: none; border-top: 3px solid rgb(233, 229, 229); width: 100%;">
-          <li>✅ HTML multimedia elements (audio, video, images)</li>
-          <hr style="border: none; border-top: 3px solid rgb(233, 229, 229); width: 100%;">
-          <li>✅ HTML accessibility and semantic markup</li>
-        </ul>
+      <!-- Favorite Topics Section -->
+      <section id="favorite-section" class="hidden">
+        <h3>My Favourite Topics</h3>
+        <div class="favorite-items">
+          <div class="favorite-item">Khalid's Course</div>
+          <div class="favorite-item">Biomedical Instruments</div>
+        </div>
       </section>
-
-
-      
     </div>
+
+    <!-- JavaScript placed correctly at the end of the body -->
+    <script>
+      // Select the favorite button and the section
+      const favoriteBtn = document.getElementById("favorite-btn");
+      const favoriteSection = document.getElementById("favorite-section");
+
+      // Toggle the 'active' class to show/hide the section
+      favoriteBtn.addEventListener("click", () => {
+        favoriteSection.classList.toggle("active");
+      });
+    </script>
+    <script src="index.js"></script>
 
     <footer>
       <p>Developed with ❤️ © 2023</p>
     </footer>
-    
   </body>
 </html>

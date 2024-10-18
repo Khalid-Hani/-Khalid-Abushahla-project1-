@@ -27,6 +27,10 @@ body {
   flex-direction: column;
   background-color: var(--bg_default);
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 h3,
 h4 {
