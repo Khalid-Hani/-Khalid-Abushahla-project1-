@@ -41,15 +41,37 @@ img {
   max-width: 100%; /* The image will not exceed the container's width */
   height: 100%; /* The height will adjust automatically to maintain the aspect ratio */
 }
+.end-side-main-list h2 {
+  padding: 0;
+  margin: 0;
+  padding-top: 2vh;
+  padding-bottom: 1.5vh;
+  color: var(--body-text);
+}
+
+h2 {
+  font-size: 20px;
+  color: #333;
+}
 
 ul {
   list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
 li {
-  margin: 0px 0;
-  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  padding-left: ;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  color: var(--lines-color);
 }
 
 button:active {
@@ -102,6 +124,7 @@ button:active {
 
 .triangle-container {
   position: relative;
+  padding-bottom: 50px;
 }
 
 .triangle-a {
@@ -121,41 +144,68 @@ button:active {
 .container {
   display: flex;
   flex-direction: column;
+  left: 35%;
+
   gap: 1px;
-  margin-left: 600px;
+  position: absolute;
+  top: 40%;
 }
 
-.full-black-section {
+/* #main-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .full-black-section {
   margin: 0;
   background-color: rgb(46, 43, 43);
   height: 350px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
   margin-top: 30px;
+} */
+
+.main-content-side-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background: #333333;
 }
 
 .main-content {
-  background-color: rgb(46, 43, 43);
-  height: 350px;
-  width: 40%;
-
+  width: 35%;
   display: flex;
-
   flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-left: 20%;
 }
 
 .side-box {
   display: flex;
   flex-direction: column;
-  height: 420px;
-  width: 300px;
-  position: relative;
-
-  align-items: right;
+  /* height: 500px; */
+  width: 350px;
+  position: absolute;
   background-color: white;
-  border: 5px solid white;
-  margin-top: 40px;
+  border: 2.5px solid white;
+  margin-top: 170px;
+
+  ////////////////
+  top: 20px;
+  right: 20%;
+  padding: 0px;
+  z-index: 1000;
 }
 
 .sub-side-box {
@@ -163,7 +213,7 @@ button:active {
   flex-direction: column;
 
   background-color: white;
-  position: absolute;
+
   left: 0;
   bottom: 0;
   right: 0;
@@ -188,17 +238,32 @@ button:active {
 }
 
 .end-side {
-  display: flex;
-  flex-direction: column;
-
-  height: 600px;
-  width: 100%;
   background-color: var(--bg_body);
+  padding-bottom: 5vh;
+}
+.end-side-main-list {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  background-color: var(--bg_default);
+
+  position: relative;
+  top: 3vh;
+  left: 41vh;
+  z-index: 1000000;
+  width: 33%;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 3vh;
 }
 
 .main-list {
   display: flex;
   flex-direction: column;
+  align-self: center;
+
+  /* width: 1440px; */
   margin-left: 300px;
   margin-right: 650px;
   background-color: var(--bg_default);
@@ -210,12 +275,23 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin: 15px;
+  margin: 0;
   background-color: var(--bg_default);
+}
+
+.li-li {
+  padding-left: 5vh;
+  color: var(--body-text);
 }
 
 footer {
   text-align: center;
+  z-index: 1000;
   background-color: var(--bg_body);
   color: var(--body-text);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
 }

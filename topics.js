@@ -110,11 +110,12 @@ function renderCourseById(course) {
   const stars = course.rating ? generateStars(course.rating) : ""; // Check if rating is valid
 
   const subtopicsList = course.subtopics
-    .map((subtopic) => `<li>✅ ${subtopic}</li>`)
+    .map((subtopic) => ` <ul><hr><li class="li-li"  >✅ ${subtopic}</li></ul>`)
     .join("");
 
   detailsDiv.innerHTML = `
-    <section class="full-black-section">
+   
+    <div class="main-content-side-box">
       <section class="main-content">
         <div>
           <h2 style="color: var(--brand-secondary)">
@@ -144,19 +145,25 @@ function renderCourseById(course) {
           </div>
         </div>
       </div>
+      </div>
       <div class="end-side">
-        <section class="main-list">
-          <h2 style="font-weight: bold; margin-left: 15px; margin-bottom: 0;">HTML Sub Topics</h2>
-          <ul class="sub-main-list">
-            <hr style="border: none; border-top: 3px solid rgb(233, 229, 229); width: 100%;">
+       <div class="end-side-main-list">
+      
+          <h2 style =" padding-left : 5vh ">${course.topic} Sub Topics</h2>
+           
+          <ul class="sub-main-list" >
+          
             ${subtopicsList}
+            
           </ul>
-        </section>
+         </div>
       </div>
     </section>
+    
   `;
 
-  const container = document.getElementById("main-frame"); // Ensure you have a container element
+  const container = document.getElementById("main-frame");
+  container.innerHTML = ""; // Clear previous content
   container.appendChild(detailsDiv);
   console.log("-----------end-----------");
 }
