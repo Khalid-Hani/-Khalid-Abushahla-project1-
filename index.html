@@ -19,12 +19,13 @@
         class="dark-mode-button"
         onclick="document.body.classList.toggle('darkmode')"
       >
-        <span class="moon-icon">🌙</span>
+        <span class="moon-icon"><ion-icon name="moon-outline"></ion-icon></span>
         Dark Mode
       </button>
 
       <button class="favourites-button" id="favorite-btn">
-        <span class="favourites-icon">❤️</span>
+        
+        <span class="favourites-icon" ><ion-icon name="heart-outline"></ion-icon></span>
         Favourites
       </button>
     </div>
@@ -63,7 +64,7 @@
         <input
           type="text"
           class="search-input"
-          placeholder="Search the website..."
+          placeholder="🔎 Search the website..."
         />
         <select>
           <option value="default">Default</option>
@@ -72,6 +73,9 @@
           <option value="default">Default</option>
         </select>
       </div>
+      <div style="font-size: 25px; padding: 10px; padding-left: 15vh; font-weight: bold;">"24" Web Topics Found</div>
+
+      
 
       <div class="container-of-cards" id="card"></div>
 
@@ -79,12 +83,16 @@
       <section id="favorite-section" class="hidden">
         <h3>My Favourite Topics</h3>
         <div class="favorite-items">
-          <div class="favorite-item">Khalid's Course</div>
-          <div class="favorite-item">Biomedical Instruments</div>
+          <div class="favorite-item" > <img src="/Logos/react.webp">
         </div>
-      </section>
-    </div>
+        <div class="favorite-items">
+          <div class="favorite-item" > <img src="/Logos/cloud.jpeg">
+        </div>
+      
 
+     
+    </div>
+      </section>
     <!-- JavaScript placed correctly at the end of the body -->
     <script>
       // Select the favorite button and the section
@@ -101,5 +109,9 @@
     <footer>
       <p>Developed with ❤️ © 2023</p>
     </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
   </body>
 </html>

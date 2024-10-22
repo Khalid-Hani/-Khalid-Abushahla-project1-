@@ -1,8 +1,10 @@
-// Function to generate star ratings with half stars (Unicode approach)
 function generateStars(rating) {
-  const fullStar = "⭐";
-  const halfStar = "🌗";
-  const emptyStar = "☆";
+  const fullStar = '<ion-icon name="star" style="color:#e3c505"></ion-icon>';
+  const halfStar =
+    '<ion-icon name="star-half" style="color:#e3c505"></ion-icon>';
+  const emptyStar =
+    '<ion-icon name="star-outline" style="color:#e3c505"></ion-icon>';
+
   let stars = "";
 
   for (let i = 1; i <= 5; i++) {
@@ -16,6 +18,7 @@ function generateStars(rating) {
   }
   return stars;
 }
+//////////////////////////////////////////////////////////////////////////////////
 
 class Course {
   constructor(
@@ -141,7 +144,7 @@ function renderCourseById(course) {
           <div class="sub-sub-side-box">
             <p>Interested in this topic?</p>
             <button class="add-to-favourites"> Add to Favourites 🤍 </button>
-            <p style="text-align: center; color: rgb(233, 229, 229);">Unlimited credits</p>
+            <h5 style="text-align: center; color: rgb(233, 229, 229); margin :0.5vh ; padding :0.5vh ">Unlimited credits</h5>
           </div>
         </div>
       </div>
@@ -158,6 +161,8 @@ function renderCourseById(course) {
           </ul>
          </div>
       </div>
+    
+
     </section>
     
   `;

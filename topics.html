@@ -23,12 +23,14 @@
         class="dark-mode-button"
         onclick="document.body.classList.toggle('darkmode')"
       >
-        <span class="moon-icon">🌙</span>
+        <span class="moon-icon"><ion-icon name="moon-outline"></ion-icon></span>
         Dark Mode
       </button>
 
       <button class="favourites-button">
-        <span class="favourites-icon">🤍</span>
+        <span class="favourites-icon"
+          ><ion-icon name="heart-outline"></ion-icon
+        ></span>
         Favourites
       </button>
     </div>
@@ -44,11 +46,21 @@
         </h4>
       </div>
     </section>
+
     <div class="main-frame" , id="main-frame"></div>
 
     <script src="topics.js" defer></script>
     <footer>
       <p>Developed with ❤️ © 2023</p>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

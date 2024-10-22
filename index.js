@@ -1,13 +1,15 @@
-// Function to generate star ratings with half stars (Unicode approach)
 function generateStars(rating) {
-  const fullStar = "⭐";
-  const halfStar = "🌗";
-  const emptyStar = "☆";
+  const fullStar = '<ion-icon name="star" style="color:#e3c505"></ion-icon>';
+  const halfStar =
+    '<ion-icon name="star-half" style="color:#e3c505"></ion-icon>';
+  const emptyStar =
+    '<ion-icon name="star-outline" style="color:#e3c505"></ion-icon>';
+
   let stars = "";
 
   for (let i = 1; i <= 5; i++) {
     if (i <= Math.floor(rating)) {
-      stars += fullStar; //
+      stars += fullStar;
     } else if (i === Math.ceil(rating) && rating % 1 !== 0) {
       stars += halfStar;
     } else {
